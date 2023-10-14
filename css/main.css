@@ -42,6 +42,11 @@
     padding-bottom: 2vw;
 }
 
+.margin-right-left {
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
 .footer-color {
     background-color: #999999;
 }
@@ -118,4 +123,42 @@
 .mypage-width {
     width: 80%;
     margin: 0 auto;
+}
+
+.page-width {
+    width: 74%;
+    margin: 0 auto;
+}
+
+.margin-left {
+    margin-left: 2vw;
+}
+
+.comment {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px black;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.comment p {
+    margin: 0 auto;
+    padding: 0; 
+}
+
+.big-font {
+    font-size: 6vw;
+}
+
+.mypage-fontsize {
+    font-size: 2vw;
+}
+
+.normal-fontsize {
+    font-size: 1.5vw;
+}
+
+.disable {
+    display: none;
 }
