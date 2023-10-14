@@ -61,6 +61,11 @@
     margin: 0 auto;
 }
 
+.form-width {
+    width: 60%;
+    margin: 0 auto;
+}
+
 .user-register {
     font-weight: bold;
     font-size: 2vw;
@@ -70,13 +75,31 @@
     color: red;
 }
 
-.form-box {
+/*.form-box {
+    width: 80%;
+    margin: 0 auto;
     padding: 0.5em 1em;
-    margin: 2em 0;
     color: black;
-    background: white;/*背景色*/
+    background: white;/*背景色
 }
 
 .form-box-inner-item {
     margin: 0 auto;
+}
+*/
+
+.form-box{
+    margin: 2em 0;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px #eeeeee;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.form-box-inner-item {
+    margin: 0; 
+    padding: 0;
+}
+
+.send-button-color {
+    background-color: lightblue;
 }
