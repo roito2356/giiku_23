@@ -143,16 +143,16 @@
 }
 
 .comment {
-    padding: 2vw 1vw;
-    margin: 2vw 2vw;
+    padding: 1vw 1vw;
+    margin: 1vw 1vw;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px black;/*線*/
     border-radius: 10px;/*角の丸み*/
 }
-.comment p {
+.comment-inner {/*1015 10:24変更*/
     margin: 0 auto;
-    padding-bottom: 0.7vw;
+    padding-bottom: 1vw;
 }
 
 .big-font {
