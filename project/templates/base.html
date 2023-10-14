@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>top</title>
-    <link href="../static/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/main.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
   </head>
   <body class="margin-screen">
     <header class="nav-color">
       <ul class="nav nav-pills justify-content-end header-topmargin nav-button-position">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">教材一覧</a>
+            <a class="nav-link active" aria-current="page" href="{{url_for('top')}}">教材一覧</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="mypage.html">MYぺージ</a>
+              <a class="nav-link" href="{{url_for('mypage')}}">MYぺージ</a>
           </li>
       </ul>
     </header>
