@@ -13,18 +13,20 @@ app = Flask(__name__)
 #     username = db.Column(db.String(80), unique=True, nullable=False)
 #     password = db.Column(db.String(120), nullable=False)
 
-
-# マイページView関数
-@app.route("/mypage")
-def mypage():
-    return render_template("users/mypage.html")
-
+# テスト用View関数
+@app.route("/test")
+def test():
+    return render_template("mypage.html")
 
 # topページ(教材一覧)View関数
 @app.route("/")
 def top():
     return render_template("top-page.html")
 
+# マイページView関数
+@app.route("/mypage")
+def mypage():
+    return render_template("users/mypage.html")
 
 # ユーザー登録ページView関数
 @app.route("/register", methods=["GET", "POST"])
