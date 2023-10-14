@@ -75,6 +75,14 @@
     margin-right: 3vw;
 }
 
+.box-shadow{
+    box-shadow: 2px 2px 4px gray;
+}
+
+.box-shadow-another {
+    box-shadow: 0 0 8px gray;
+}
+
 
 
 /*トップ画面用css*/
@@ -135,8 +143,8 @@
 }
 
 .comment {
-    padding: 0.5em 1em;
-    margin: 2em 0;
+    padding: 2vw 1vw;
+    margin: 2vw 2vw;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px black;/*線*/
@@ -144,7 +152,7 @@
 }
 .comment p {
     margin: 0 auto;
-    padding: 0; 
+    padding-bottom: 0.7vw;
 }
 
 .big-font {
