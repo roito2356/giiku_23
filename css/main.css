@@ -61,6 +61,11 @@
     margin: 0 auto;
 }
 
+.form-width {
+    width: 60%;
+    margin: 0 auto;
+}
+
 .user-register {
     font-weight: bold;
     font-size: 2vw;
@@ -95,3 +100,6 @@
     padding: 0;
 }
 
+.send-button-color {
+    background-color: lightblue;
+}
