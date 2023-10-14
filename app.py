@@ -26,12 +26,12 @@ with app.app_context():
 # テスト用View関数
 @app.route("/test")
 def test():
-    return render_template("mypage.html")
+    return render_template("materials/material/dice1/index.html")
 
 # topページ(教材一覧)View関数
 @app.route("/")
 def top():
-    return render_template("top-page.html")
+    return render_template("materials/materials_list.html")
 
 # マイページView関数
 @app.route("/mypage")
@@ -42,7 +42,6 @@ def mypage():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("users/register.html")
-
 
 # 403エラーページの追加
 @app.errorhandler(403)
