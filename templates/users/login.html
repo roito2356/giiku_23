@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="main-screen-backcolor">
+      <div>
+        <div class="form-center form-width">
+          <form id="">
+            <div class="item-center user-register padding-top-normal">
+                ログイン
+            </div>
+            <div class="mb-3 padding-bottom-little">
+              <label for="exampleInputEmail1" class="form-label">メールアドレス/ユーザー名</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div class="mb-3 padding-botton-little">
+                <label for="inputPassword5" class="form-label">パスワード</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+            </div>
+            <div class="item-center padding-bottom-normal">
+                <button type="submit" class="btn btn-primary">送信</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}
