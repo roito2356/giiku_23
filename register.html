@@ -3,48 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>top</title>
+    <title>ユーザー登録画面</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
-  <body class="screen-width">
+  <body class="margin-screen">
     <header class="nav-color">
-      <ul class="nav header-topmargin justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link text-backcolor" href="#">教材一覧</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled text-backcolor">ユーザー名</a>
-        </li>
+      <ul class="nav nav-pills justify-content-end header-topmargin nav-button-position">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">教材一覧</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="mypage.html">MYぺージ</a>
+          </li>
       </ul>
     </header>
-    <div class="main-screen-backcolor">
-      <div>
-        <div class="form-center form-width">
-          <form>
-            <div class="item-center user-register padding-top-normal">
-                ユーザー登録
-            </div>
-            <div class="mb-3 padding-bottom-little">
-              <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
+    <div class="main-screen-backcolor padding-top-normal padding-bottom-normal">
+      <div class="form-center form-box">
+        <form class="form-width">
+          <div class="item-center user-register padding-top-normal padding-bottom-little">
+              ユーザー登録
+          </div>
+          <div class="mb-3 padding-bottom-little">
+            <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3 padding-bottom-little">
+              <label for="exampleInputEmail1" class="form-label">ユーザー名</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3 padding-bottom-little">
-                <label for="exampleInputEmail1" class="form-label">ユーザー名</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3 padding-botton-little">
-                <label for="inputPassword5" class="form-label">パスワード</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
-                <div id="passwordHelpBlock" class="form-text text-red padding-bottom-little">
-                パスワードは8文字以上20文字以下で入力してください
-                </div>
-            </div>
-            <div class="item-center padding-bottom-normal">
-                <button type="submit" class="btn btn-primary">送信</button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="mb-3 padding-botton-little">
+              <label for="inputPassword5" class="form-label">パスワード</label>
+              <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+              <div id="passwordHelpBlock" class="form-text text-red padding-bottom-little">
+              パスワードは8文字以上20文字以下で入力してください
+              </div>
+          </div>
+          <div class="item-center padding-bottom-normal">
+              <button type="submit" class="btn btn-primary">送信</button>
+          </div>
+        </form>
       </div>
     </div>
   </body>
