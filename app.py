@@ -13,6 +13,10 @@ app = Flask(__name__)
 #     username = db.Column(db.String(80), unique=True, nullable=False)
 #     password = db.Column(db.String(120), nullable=False)
 
+# topページView関数
+@app.route("/test")
+def test():
+    return render_template("users/mypage.html")
 
 # topページView関数
 @app.route("/")
