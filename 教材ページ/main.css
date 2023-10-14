@@ -1,0 +1,121 @@
+/*全画面共通css*/
+
+.margin-screen {
+    margin: 0 auto;
+}
+
+.main-screen-backcolor {
+    background-color: #eeeeee;
+}
+
+.header-topmargin {
+    padding-top: 5vh;
+}
+
+.nav-color {
+    background-color: lightblue	;
+    height: 16vh;
+}
+
+.text-backcolor {
+    padding: 0.5vh;
+    font-size: 2.5vh;
+}
+
+.item-center {
+    text-align: center;
+}
+
+.padding-top-normal {
+    padding-top: 5vw;
+}
+
+.padding-top-little {
+    padding-top: 2vw;
+}
+
+.padding-bottom-normal {
+    padding-bottom: 5vw;
+}
+
+.padding-bottom-little {
+    padding-bottom: 2vw;
+}
+
+.footer-color {
+    background-color: #999999;
+}
+
+.text-color-red {
+    color: red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.icon-position {
+    margin: 0 auto;
+    padding-left: 1vw;
+    padding-top: 1.5vw;
+}
+
+.nav-position {
+    margin: 0 auto;
+    padding-bottom: 1.5vw;
+    padding-right: 1vw;
+}
+
+.nav-button-position {
+    margin-right: 3vw;
+}
+
+
+
+/*トップ画面用css*/
+
+.full-screen {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*登録画面用css*/
+
+.form-center {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-width {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.user-register {
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.text-red {
+    color: red;
+}
+
+.form-box{
+    margin: 0 auto;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 5px #FFF;/*線*/
+    border-radius: 20px;/*角の丸み*/
+}
+
+.form-box-inner-item {
+    margin: 0; 
+    padding: 0;
+}
+
+/*マイページ*/
+
+.mypage-width {
+    width: 80%;
+    margin: 0 auto;
+}
