@@ -275,6 +275,7 @@ body{
 
 /*ログイン画面*/
 
-.login-fontsize {
+
+.login-fontsize { /*1015 14:06追加*/
     font-size: 1.2vw;
 }
