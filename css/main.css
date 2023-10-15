@@ -143,7 +143,7 @@
 }
 
 .comment {
-    padding: 1vw 1vw;
+    padding: 2vw 1vw;
     margin: 1vw 1vw;
     color: black;/*文字色*/
     background: #FFF;
@@ -152,7 +152,11 @@
 }
 .comment-inner {/*1015 10:24変更*/
     margin: 0 auto;
-    padding-bottom: 1vw;
+    padding-bottom: 2vw;
+}
+
+.padding-top-little-md {/*1015 11:40追加*/
+    padding-top: 1vw;
 }
 
 .big-font {
