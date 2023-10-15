@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <img src="images/dice.png" alt="サイコロ" class="mx-auto d-block" style="max-width:200px">
+        <div class="display-6 text-center">サイコロを作ろう① -HTMLでサイトの枠組みを作ろう-</div>
+        <div class="text-center mt-2">教材作成日 2023年10月10日</div>
+    </div>
+    
+    <div class="container">
+    
+        <p>（これはサンプル文です）以前、バックエンドエンジニアだった身からすれば、Reactは複雑だと感じることがあります。さらに（私はフレームワーク開発者なのですが）フレームワーク開発者にとってはハイドレーションの仕組みを作ることは厄介です。しかし、しばしばReactを使うことになります。</p>
+       
+        <p>Reactの優位な点の一つは「JSX」です。最初見た時、JSXは奇妙に思えました。「なんでJavaScriptの中にHTMLのタグが入っているんだ！」。しかし、一度慣れると、JSXは柔軟で、書きやすいことに気づきました。</p>
+       
+        <pre class="container"><code class="html">
+    &lt;div class=&quot;container&quot;&gt;
+    &lt;img src=&quot;サイコロ.png&quot; alt=&quot;サイコロ&quot; class=&quot;mx-auto d-block&quot; style=&quot;max-width:200px&quot;&gt;
+    &lt;div class=&quot;display-6 text-center&quot;&gt;サイコロを作ろう① -HTMLでサイトの枠組みを作ろう-&lt;/div&gt;
+    &lt;div class=&quot;text-center mt-2&quot;&gt;教材作成日 2023年10月10日&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+       
+        <p>順を追って説明します。まず、<code>&lt;pre&gt;</code>タグでは、...一方<code>&lt;img&gt;</code>タグでは...</p>
+    
+    </div>
+    
+    <!-- 記録フォーム -->
+    
+    <form action="">
+        <div class="container shadow-sm p-4 rounded" style="background-color: white;">
+            <div style="font-size: 1.4em;">学習記録を残す</div>
+            <div class="row mb-3 mt-3">
+                <label for="" class="col-sm-3 col-form-label" style="font-size:1.05em">　理解度　</label>
+                <div class="col-sm-9">
+                    <i class="fa-solid fa-star" style="color:gray" id="starbutton_1" onclick="star_update(1)"></i>
+                    <i class="fa-solid fa-star" style="color:gray" id="starbutton_2" onclick="star_update(2)"></i>
+                    <i class="fa-solid fa-star" style="color:gray" id="starbutton_3" onclick="star_update(3)"></i>
+                    <i class="fa-solid fa-star" style="color:gray" id="starbutton_4" onclick="star_update(4)"></i>
+                    <i class="fa-solid fa-star" style="color:gray" id="starbutton_5" onclick="star_update(5)"></i>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="" class="col-sm-3 col-form-label" style="font-size: 1.05em;">コメント</label>
+                <div class="col-sm-9"><textarea name="" id="comment" rows="5" cols="30" class="form-control"></textarea></div>
+            </div>
+            <input type="submit" value="記録を残す" class="btn btn-info btn-lg text-white mt-2" style="width:100%" onclick="test()" id="submitbutton">
+            </div>
+    </form>
+    
+    <!-- レビュー -->
+    <!-- 動的に書き換えられるのはこの部分のみというイメージ -->
+    
+    <div class="container review">
+        <div>
+            hogehoge
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+        </div>
+        <div>面白かったけど、○○の部分がよく分からない</div>
+    </div>
+    
+    <div class="container review">
+        <div>
+            nyonyonyo
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+        </div>
+        <div></div>
+    </div>
+    
+    <div class="container review">
+        <div>
+            sakura
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+        </div>
+        <div>とてもタメになりました！！最高です！！サイコゥ！サイコゥ！サイコゥ！サイコゥ！サイコゥ！サイコゥ！サイコゥ！サイコゥ！サイコゥ！</div>
+    </div>
+    <script>hljs.highlightAll();</script>
+    <script src="js/saikoro.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
