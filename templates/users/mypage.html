@@ -6,11 +6,11 @@
           <div class="padding-bottom-little bold mypage-fontsize">マイプロフィール</div>
           <div class="row item-center padding-bottom-little">
               <div class="col bold">ユーザーネーム</div>
-              <div class="col">{{ session['username'] }}</div>
+              <div class="col">{{ current_user.username | truncate(10) }}</div>
           </div>
           <div class="row item-center padding-bottom-little">
               <div class="col bold">メールアドレス</div>
-              <div class="col">{{ session['email'] }}</div>
+              <div class="col">{{ current_user.email | truncate(20) }}</div>
           </div>
       </div>
       <div class="col-5 form-box margin-screen item-center box-shadow">
@@ -59,6 +59,9 @@
       </div>
     </div>
   </div>
+  <p><a href="{{ url_for('accountup', user_id=current_user.id) }}" class="btn btn-secondary">
+    ユーザー情報の変更
+    </a></p>
 </div>
 </div>
     {% endblock %}

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+    <!-- 管理者のみ削除ボタンを表示 -->
     {% if current_user.is_administrator() %}
     <section id="menu">
         <div class="container my-3 py-4 bg-light">
@@ -46,7 +47,7 @@
         </div>
     </section>
   
-    <!-- Modal -->
+    <!-- 上の削除ボタンを押すとでてくるモーダル -->
   <div class="modal fade" id="del_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -59,7 +60,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
-          <form method="POST"> <!-- s10-11, 'users.'s12-144-->
+          <form method="POST" action="{{url_for('delete_user', user_id=form.id)}}">
               <input type="submit" class="btn btn-danger" value="削除">
           </form>
         </div>

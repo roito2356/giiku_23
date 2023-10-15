@@ -107,7 +107,7 @@ class User(db.Model, UserMixin):
 
     def check_password(
         self, password
-    ):  # ハッシュ化されたパスワードのチェック　※どちらかがハッシュ化されていないパスワードはチェックできない
+    ):  # ハッシュ化されたパスワードのチェック　※データベースのパスワードはハッシュ化されていないとチェックできない
         # print(self, password, check_password_hash(self.password_hash, password))
         return check_password_hash(self.password_hash, password)
 
@@ -268,7 +268,11 @@ def login():
                 login_user(user)
                 next = request.args.get("next")
                 if next == None or not next[0] == "/":
-                    next = url_for("mypage")
+                    # 管理者の場合ユーザー管理ページへそれ以外はMypageへ
+                    if current_user.is_administrator():
+                        next = url_for("user_maintenance")
+                    else:
+                        next = url_for("mypage")
                 return redirect(next)
             else:
                 flash("パスワードが一致しません")
@@ -290,6 +294,9 @@ def logout():
 @app.route("/user_maintenance")
 @login_required
 def user_maintenance():
+    # 管理者で無い場合403エラー
+    if not current_user.is_administrator():
+        abort(403)
     page = request.args.get("page", 1, type=int)
     users = User.query.order_by(User.id).paginate(page=page, per_page=10)
     return render_template("users/user_maintenance.html", users=users)
@@ -300,6 +307,9 @@ def user_maintenance():
 @login_required
 def accountup(user_id):
     user = User.query.get_or_404(user_id)
+    # 自分のユーザか管理者では無い場合403エラー
+    if user.id != current_user.id and not current_user.is_administrator():
+        abort(403)
     form = UpdateUserForm(user_id)
     if form.validate_on_submit():
         user.username = form.username.data
@@ -308,11 +318,28 @@ def accountup(user_id):
             user.password = form.password.data
         db.session.commit()
         flash("ユーザーアカウントが更新されました")
-        return redirect(url_for("user_maintenance"))
+        return redirect(url_for("mypage"))
     elif request.method == "GET":
         form.username.data = user.username
         form.email.data = user.email
     return render_template("users/accountup.html", form=form)
+
+
+# ユーザー削除View関数
+@app.route("/<int:user_id>/delete", methods=["GET", "POST"])
+@login_required
+def delete_user(user_id):
+    user = User.query.get_or_404(user_id)
+    # 管理者では無い場合403エラー
+    if not current_user.is_administrator():
+        abort(403)
+    if user.is_administrator():
+        flash("管理者は削除できません")
+        return redirect(url_for("accountup", user_id=user_id))
+    db.session.delete(user)
+    db.session.commit()
+    flash("ユーザーアカウントが削除されました")
+    return redirect(url_for("user_maintenance"))
 
 
 # 403エラーページの追加
