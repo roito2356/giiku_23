@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="main-screen-backcolor">
+      <div>
+        <div class="form-center form-width">
+          <form method="post">
+            {{ form.hidden_tag() }}
+            <div class="item-center user-register padding-top-normal">
+                ログイン
+            </div>
+            <div class="mb-3 padding-bottom-little">
+              {{ render_field(form.email, class="form-control form-control-lg", placeholder="メールアドレス") }}
+            </div>
+            <div class="mb-3 padding-botton-little">
+              {{ render_field(form.password, class="form-control form-control-lg", placeholder="パスワード") }}
+            </div>
+            <div class="item-center padding-bottom-normal">
+              {{ form.submit(class="btn btn-primary", value="ログイン") }} 
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}

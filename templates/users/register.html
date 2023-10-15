@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="main-screen-backcolor padding-top-normal padding-bottom-normal">
+    <div class="form-center form-box">
+      <form class="form-width" method="post">
+        {{ form.hidden_tag() }}
+        <div class="item-center user-register padding-top-normal padding-bottom-little">
+            ユーザー登録
+        </div>
+        <div class="mb-3 padding-bottom-little">
+          <!-- <label for="exampleInputEmail1" class="form-label">ユーザー名</label> -->
+          <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+          {{ render_field(form.username, placeholder="ユーザー名", class="form-control form-control-lg") }}
+        </div>
+        <div class="mb-3 padding-bottom-little">
+          <!-- <label for="exampleInputEmail1" class="form-label">メールアドレス</label> -->
+          <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+          {{ render_field(form.email, placeholder="メールアドレス", class="form-control form-control-lg") }}
+        </div>
+        <div class="mb-3 padding-botton-little">
+          <!-- <label for="inputPassword5" class="form-label">パスワード</label> -->
+          <!-- <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock"> -->
+          {{ render_field(form.password, placeholder="パスワード", class="form-control form-control-lg") }}
+          <div id="passwordHelpBlock" class="form-text text-red padding-bottom-little">
+          パスワードは8文字以上20文字以下で入力してください
+          </div>
+        </div>
+        <div class="mb-3 padding-botton-little">
+          <!-- <label for="inputPass_confirm5" class="form-label">パスワード（確認）</label> -->
+          <!-- <input type="password" id="inputPass_confirm5" class="form-control" aria-labelledby="passwordHelpBlock"> -->
+          {{ render_field(form.pass_confirm, placeholder="パスワード(確認)", class="form-control form-control-lg") }}
+        </div>
+        <div class="item-center padding-bottom-normal">
+            <!-- <button type="submit" class="btn btn-primary">送信</button> -->
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

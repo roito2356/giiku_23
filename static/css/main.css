@@ -1,0 +1,257 @@
+/*全画面共通css*/
+
+.margin-screen {
+    margin: 0 auto;
+}
+
+.main-screen-backcolor {
+    background-color: #eeeeee;
+}
+
+.header-topmargin {
+    padding-top: 5vh;
+}
+
+.nav-color {
+    background-color: lightblue	;
+    height: 16vh;
+}
+
+.text-backcolor {
+    padding: 0.5vh;
+    font-size: 2.5vh;
+}
+
+.item-center {
+    text-align: center;
+}
+
+.padding-top-normal {
+    padding-top: 5vw;
+}
+
+.padding-top-little {
+    padding-top: 2vw;
+}
+
+.padding-bottom-normal {
+    padding-bottom: 5vw;
+}
+
+.padding-bottom-little {
+    padding-bottom: 2vw;
+}
+
+.footer-color {
+    background-color: #999999;
+}
+
+.text-color-red {
+    color: red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.icon-position {
+    margin: 0 auto;
+    padding-left: 1vw;
+    padding-top: 1.5vw;
+}
+
+.nav-position {
+    margin: 0 auto;
+    padding-bottom: 1.5vw;
+    padding-right: 1vw;
+}
+
+.nav-button-position {
+    margin-right: 3vw;
+}
+
+.box-shadow{
+    box-shadow: 2px 2px 4px gray;
+}
+
+.box-shadow-another {
+    box-shadow: 0 0 8px gray;
+}
+
+/*トップ画面用css*/
+
+.full-screen {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*登録画面用css*/
+
+.form-center {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-width {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.user-register {
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.text-red {
+    color: red;
+}
+
+.form-box{
+    margin: 0 auto;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 5px #FFF;/*線*/
+    border-radius: 20px;/*角の丸み*/
+}
+
+.form-box-inner-item {
+    margin: 0; 
+    padding: 0;
+}
+
+/*マイページ*/
+
+.mypage-width {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page-width {
+    width: 74%;
+    margin: 0 auto;
+}
+
+.margin-left {
+    margin-left: 2vw;
+}
+
+.comment {
+    padding: 2vw 1vw;
+    margin: 2vw 2vw;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px black;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.comment p {
+    margin: 0 auto;
+    padding-bottom: 0.7vw;
+}
+
+.big-font {
+    font-size: 6vw;
+}
+
+.mypage-fontsize {
+    font-size: 2vw;
+}
+
+.normal-fontsize {
+    font-size: 1.5vw;
+}
+
+.disable {
+    display: none;
+}
+
+/* 教材一覧 */
+body{
+    background-color: #f5f5f5;
+}
+
+.content{
+    width:290px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #ccc;
+    text-align: center;
+    height: 380px;
+}
+
+.contents{
+    /* display:flex; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 290px));
+    gap: 5px 20px;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.content_image{
+    width:125px;
+    margin: 20px;
+}
+
+.content_title{
+    font-size: 20px;
+}
+
+.content_sub_title{
+    font-size:15px;
+}
+
+.done_button{
+    width:200px;
+    background-color:#618FC5;
+    display: inline-block;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 15px;
+    font-size:20px;
+    color:white;
+}
+
+.start_button{
+    width:200px;
+    background-color: #89D3FF;
+    display: inline-block;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 15px;
+    font-size:20px;
+    color:white;
+}
+
+/* 教材DICE */
+p{
+    font-size: 1.1em;
+    margin:1.5em;
+}
+pre{
+    font-size:1em;
+    white-space: pre-wrap;
+}
+.star{
+    background-color: white;
+    border: 0px;
+}
+label{
+    white-space: no-wrap;
+}
+.review{
+    border-bottom:1px solid gray;
+    padding:5px;
+    padding-bottom:20px;
+    padding-top:10px;
+    margin-top:15px;
+}
+body{
+    background-color: #f5f5f5;
+}
