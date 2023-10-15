@@ -2,21 +2,21 @@
 {% block content %}
   <div class="main-screen-backcolor padding-top-normal padding-bottom-normal">
     <div class="form-center form-box">
-      <form class="form-width">
+      <form class="form-width"  method="POST">
         <div class="item-center user-register padding-top-normal padding-bottom-little">
             ユーザー登録
         </div>
         <div class="mb-3 padding-bottom-little">
           <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" required>
         </div>
         <div class="mb-3 padding-bottom-little">
-            <label for="exampleInputEmail1" class="form-label">ユーザー名</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputuser1" class="form-label">ユーザー名</label>
+            <input type="text" class="form-control" id="exampleInputuser1" name="exampleInputuser1" required>
         </div>
         <div class="mb-3 padding-botton-little">
             <label for="inputPassword5" class="form-label">パスワード</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+            <input type="password" id="inputPassword5" class="form-control" name="inputPassword5" aria-labelledby="passwordHelpBlock" required>
             <div id="passwordHelpBlock" class="form-text text-red padding-bottom-little">
             パスワードは8文字以上20文字以下で入力してください
             </div>

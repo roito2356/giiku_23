@@ -36,12 +36,57 @@ def top():
 # マイページView関数
 @app.route("/mypage")
 def mypage():
-    return render_template("users/mypage.html")
+    if 'id' in session:
+        return render_template("users/mypage.html")
+    else:
+        return render_template("users/login.html")
 
 # ユーザー登録ページView関数
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    return render_template("users/register.html")
+    if request.method == 'POST':
+        name = request.form['exampleInputuser1']
+        email = request.form['exampleInputEmail1']
+        password = request.form['inputPassword5']
+
+        existing_user_name = User.query.filter_by(name=name).first()
+        existing_user_email = User.query.filter_by(email=email).first()
+
+        if existing_user_name or existing_user_email:
+            # ユーザー名がすでに存在する場合はエラーメッセージを表示
+            return render_template('users/register.html')
+        
+        new_user = User(name=name, email=email, password=password)
+        db.session.add(new_user)
+        db.session.commit()
+
+        return redirect(url_for('login'))
+
+    return render_template('users/register.html')
+
+# ログイン機能
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        name_email = request.form['name_email']
+        password = request.form['password']
+
+        user = User.query.filter((User.name == name_email or User.email == name_email) & (User.password == password)).first()
+
+        if user:
+            session['id'] = user.id
+            # ログインに成功した場合は/mypageにリダイレクト
+            return redirect(url_for('mypage'))
+        else:
+            # ログインに失敗した場合はlogin.htmlにリダイレクト
+            return redirect(url_for('login')) #ログイン失敗的なメッセージ
+
+    return render_template('users/login.html')
+
+
+
+
+
 
 # 403エラーページの追加
 @app.errorhandler(403)
