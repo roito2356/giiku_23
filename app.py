@@ -27,7 +27,6 @@ from flask_login import (
 )
 from werkzeug.security import check_password_hash, generate_password_hash
 
-# from flask_login import UserMixin
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "mysecretkey"  # セッションのセキュリティキー
@@ -178,13 +177,13 @@ class RegistrationForm(FlaskForm):
     pass_confirm = PasswordField("パスワード(確認)", validators=[DataRequired()])
     submit = SubmitField("登録")
 
+    def validate_email(self, field):
+        if User.query.filter_by(email=field.data).first():
+            raise ValidationError("入力されたメールアドレスは既に登録されています。")
+
     def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
             raise ValidationError("入力されたユーザー名は既に使われています。")
-
-    def validate_email(self, field):
-        if User.query.filter_by(email=field.data).first():
-            raise ValidationError("入力されたメールアドレスは既に登場されています。")
 
 
 # ユーザー更新フォームの型定義
